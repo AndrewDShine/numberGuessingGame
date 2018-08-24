@@ -4,7 +4,7 @@ import java.util.Random;
 public class GameFiles
 	{
 		
-
+		//Initializes first variables
 		static Scanner userInput = new Scanner(System.in);
 		static Scanner userIntPut = new Scanner(System.in);
 		static Random randomNumber = new Random();
@@ -14,15 +14,17 @@ public class GameFiles
 
 		public static void main(String[] args)
 		{
-			
+			//Asks for the user's name and stores it in a global variable
 			greetUser();
 			
 			while (repeat)
 				{
-					
+					//Asks the user for what difficulty they'd like to play at and places it in a variable
 					int difficultyLevel = askDifficulty();
+					//Runs the game, passing in the selected difficulty level
 					runGame(difficultyLevel); 
 					
+					//if they'd like to play again, keeps repeat true
 					repeat = askToPlayAgain();
 					
 				}

@@ -17,7 +17,7 @@ public class GameFiles
 			//Asks for the user's name and stores it in a global variable
 			greetUser();
 			
-			while (repeat)
+			do
 				{
 					//Asks the user for what difficulty they'd like to play at and places it in a variable
 					int difficultyLevel = askDifficulty();
@@ -28,6 +28,7 @@ public class GameFiles
 					repeat = askToPlayAgain();
 					
 				}
+			while (repeat);
 		}
 		
 		public static void greetUser()
@@ -86,7 +87,7 @@ public class GameFiles
 			int timesGuessed = 0;
 			
 			System.out.println("Guess a number between 1 and "+difficultyLevel+"! (inclusive)");
-			while (!userWin)
+			do 
 				{
 					userGuess = userIntPut.nextInt();
 					if ((userGuess < secretNumber) && (userGuess >= 1))
@@ -119,6 +120,7 @@ public class GameFiles
 							timesGuessed = timesGuessed + 1;
 						}
 				}
+			while (!userWin);
 		}
 	
 		public static boolean askToPlayAgain()

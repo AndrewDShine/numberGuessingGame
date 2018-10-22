@@ -3,7 +3,7 @@ import java.util.Random;
 
 public class GameFiles
 	{
-		
+		//branch testing
 		//Initializes first variables
 		static Scanner userInput = new Scanner(System.in);
 		static Scanner userIntPut = new Scanner(System.in);
